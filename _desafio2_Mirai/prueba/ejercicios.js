@@ -45,7 +45,17 @@ console.log("La suma de los numeros en el array es: " + sumarNumeros(numeros2));
 // Ejercicio 4: Ordenar un array de números de menor a mayor
 const ordenarNumeros = (arr) => {
   // tu código aquí
-  return arr.sort();
+  for (let i = 1; i < arr.length; i++){
+    let length = arr.length - 1;
+    for (let j = length; j >= i; j--) {
+      if (arr[j-1] > arr[j]) {
+        const temp = arr[j - 1];
+        arr[j - 1] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
 };
 const numeros3 = [5, 2, 9, 1, 5, 6];
 console.log(ordenarNumeros(numeros3)); // Resultado esperado: [1, 2, 5, 5, 6, 9]
