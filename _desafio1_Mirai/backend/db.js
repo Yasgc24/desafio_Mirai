@@ -1,4 +1,4 @@
-// Conección con la base de datos MongoDB con mongoose
+// Conexión con la base de datos MongoDB con mongoose
 const { Schema, createConnection } = require('mongoose');
 const connection = createConnection('mongodb://127.0.0.1:27017/registro', { useNewUrlParser: true });
 
